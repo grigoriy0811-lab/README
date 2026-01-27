@@ -2,17 +2,11 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hi! What's your name?");
-        System.out.println("Grigoriy Shamodi");
-        String name = "grigoriy";
-        System.out.println("HI " + name);
+        System.out.println("Grioriy");
 
 
-
-        int x = 100000;
-        int y = 78000;
-        System.out.println(x - y);
-
-        // x = income y = spending
+        int income = 100000;
+        int spending = 78000;
+        System.out.println(income- spending);
     }
 }
