@@ -1,12 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
+    public static void dutyCost(double finish) {
+        System.out.println(finish);
+    }
+
+
     public static void main(String[] args) {
-        System.out.println("Grigoriy");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Добрый день!");
+        System.out.print("Сколько рублей стоит ваш товар?");
+        int price = scanner.nextInt();
 
+        System.out.print("Сколько кг весит ваш товар?");
+        int weight = scanner. nextInt();
 
-        int income = 100000;
-        int spending = 78000;
-        System.out.println(income- spending);
+        System.out.println("Ваша стоимость пошлины составит");
+
+        double p1 = price;
+        double p2 = weight;
+
+        dutyCost(p1 * 0.01 + p2 * 100);
     }
 }
