@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int calculateCustoms(int price, int weight) {
-     int duty = price / 100 + weight * 100;
-        System.out.println(" Стоимость пошлины:" + duty);
-        return duty;
+
+    public static int duty;
+
+    public static int calculateCustoms(int p1, int p2) {
+     int duty = p1 / 100 + p2 * 100;
+     return duty;
     }
 
 
@@ -17,7 +19,10 @@ public class Main {
         System.out.println("Введите вес товара в кг:");
         int weight = scanner.nextInt();
 
-       calculateCustoms(price, weight);
+        duty = calculateCustoms(price, weight);
+
+       System.out.println("Стоимость пошлины" + " = " + duty);
+
 
 
 
