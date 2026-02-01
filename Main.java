@@ -1,25 +1,26 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void dutyCost(double finish) {
-        System.out.println(finish);
+    public static int calculateCustoms(int price, int weight) {
+     int duty = price / 100 + weight * 100;
+        System.out.println(" Стоимость пошлины:" + duty);
+        return duty;
     }
 
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Добрый день!");
-        System.out.print("Сколько рублей стоит ваш товар?");
+        System.out.println("Здравствуйте!");
+        System.out.println("Введите цену товара в рублях:");
         int price = scanner.nextInt();
 
-        System.out.print("Сколько кг весит ваш товар?");
-        int weight = scanner. nextInt();
+        System.out.println("Введите вес товара в кг:");
+        int weight = scanner.nextInt();
 
-        System.out.println("Ваша стоимость пошлины составит");
+       calculateCustoms(price, weight);
 
-        double p1 = price;
-        double p2 = weight;
 
-        dutyCost(p1 * 0.01 + p2 * 100);
+
     }
+
 }
