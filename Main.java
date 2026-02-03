@@ -1,27 +1,20 @@
+import java.time.Year;
 import java.util.Scanner;
 
 public class Main {
 
-    public static int calculateCustoms(int price, int weight) {
-     int duty = price / 100 + weight * 100;
-     return duty;
-    }
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Здравствуйте!");
-        System.out.println("Введите цену товара в рублях:");
-        int price = scanner.nextInt();
+        System.out.println("Введите год в формате ''yyyy'' ");
+        int year = scanner.nextInt();
 
-        System.out.println("Введите вес товара в кг:");
-        int weight = scanner.nextInt();
-
-        int duty = calculateCustoms(price, weight);
-
-       System.out.println("Стоимость пошлины" + " = " + duty);
-
-
+         if(year % 400 == 0) {
+             System.out.println("Колличество дней 366");
+         } else if (year % 4 == 0) {
+             System.out.println("Колличество дней 366");
+         } else {
+             System.out.println("Колличество дней 365");
+         }
 
 
     }
