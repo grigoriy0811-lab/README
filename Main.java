@@ -6,8 +6,8 @@ public class Main {
         boolean isBookBig = myBook.isBig();
         System.out.println("Книга Шантарам большая? " + isBookBig);
 
-        boolean hasMather = myBook.macher("рам");
-        System.out.println("Есть ли слово 'рам' в название или имени автора? " + hasMather );
+        boolean hasMatches = myBook.matches("рам");
+        System.out.println("Есть ли слово 'рам' в название или имени автора? " + hasMatches);
 
         int priceBook = myBook.estimatePrice();
         System.out.println("Цена книги " + priceBook + " рублей");
