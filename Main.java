@@ -1,17 +1,44 @@
+import java.util.Random;
+
 public class Main {
+    public static final int SIZE = 8;
+
+    public static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int[][] rotateMatrix(int[][] matrix) {
+        int[][] rotated = new int[SIZE][SIZE];
+
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                rotated[j][SIZE - 1 - i] = matrix[i][j];
+            }
+        }
+        return rotated;
+    }
+
     public static void main(String[] args) {
-        Book myBook = new Book("Шантарам", 2003, "Грегори Дэвид Робертс", 864);
-        System.out.println(myBook);
+        int[][] colors = new int[SIZE][SIZE];
+        Random random = new Random();
 
-        boolean isBookBig = myBook.isBig();
-        System.out.println("Книга Шантарам большая? " + isBookBig);
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                colors[i][j] = random.nextInt(256);
+            }
+        }
 
-        boolean hasMatches = myBook.matches("рам");
-        System.out.println("Есть ли слово 'рам' в название или имени автора? " + hasMatches);
+        System.out.println("Исходная матрица:");
+        printMatrix(colors);
 
-        int priceBook = myBook.estimatePrice();
-        System.out.println("Цена книги " + priceBook + " рублей");
+        int[][] rotatedColors = rotateMatrix(colors);
 
-
+        System.out.println("Матрица повернутая на 90 градусов:");
+        printMatrix(rotatedColors);
     }
 }
